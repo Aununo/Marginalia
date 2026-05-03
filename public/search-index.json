@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Hello World",
+    "date": "2026-03-25",
+    "summary": "A playground post for checking how headings, lists, links, code blocks, tables, footnotes, and inline HTML render on the post page.",
+    "tags": [
+      "hello world",
+      "markdown",
+      "playground"
+    ],
+    "url": "/public/posts/hello-world.html"
+  },
+  {
+    "title": "52 Things I Love About Shenshen",
+    "date": "2025-12-28",
+    "summary": "A timeline of two people finding each other — from a QQ request to a winter solstice dinner.",
+    "tags": [
+      "love",
+      "memory",
+      "together"
+    ],
+    "url": "/public/posts/52-things-i-love-about-shenshen.html"
+  }
+]

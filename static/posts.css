@@ -1,0 +1,337 @@
+body.posts-page-body {
+  --text-primary: var(--color, #3d3630);
+  --text-secondary: var(--color-muted, #a89e94);
+  --background: var(--bg, #faf6f0);
+  --technical-bg: rgba(184, 134, 11, 0.08);
+  --reflection-bg: rgba(196, 125, 125, 0.08);
+  --article-bg: rgba(122, 140, 110, 0.08);
+  --literature-bg: rgba(139, 92, 246, 0.06);
+  --life-bg: rgba(59, 130, 246, 0.06);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--background);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+html[data-theme="dark"] body.posts-page-body {
+  --technical-bg: rgba(212, 160, 23, 0.12);
+  --reflection-bg: rgba(212, 160, 160, 0.1);
+  --article-bg: rgba(154, 173, 140, 0.1);
+  --literature-bg: rgba(167, 139, 250, 0.1);
+  --life-bg: rgba(96, 165, 250, 0.1);
+}
+html[data-theme="dark"] .legend-color.technical {
+  background: radial-gradient(ellipse 70% 80% at 30% 40%, rgba(212, 160, 23, 0.7), transparent),
+              radial-gradient(ellipse 60% 70% at 70% 60%, rgba(230, 180, 50, 0.45), transparent),
+              rgba(212, 160, 23, 0.4);
+}
+html[data-theme="dark"] .legend-color.reflection {
+  background: radial-gradient(ellipse 70% 80% at 35% 45%, rgba(212, 160, 160, 0.65), transparent),
+              radial-gradient(ellipse 55% 65% at 65% 55%, rgba(230, 180, 180, 0.4), transparent),
+              rgba(212, 160, 160, 0.4);
+}
+html[data-theme="dark"] .legend-color.article {
+  background: radial-gradient(ellipse 65% 75% at 30% 40%, rgba(154, 173, 140, 0.65), transparent),
+              radial-gradient(ellipse 60% 70% at 70% 60%, rgba(175, 195, 160, 0.4), transparent),
+              rgba(154, 173, 140, 0.4);
+}
+html[data-theme="dark"] .legend-color.literature {
+  background: radial-gradient(ellipse 70% 80% at 35% 45%, rgba(167, 139, 250, 0.65), transparent),
+              radial-gradient(ellipse 55% 65% at 65% 55%, rgba(185, 160, 255, 0.4), transparent),
+              rgba(167, 139, 250, 0.4);
+}
+html[data-theme="dark"] .legend-color.life {
+  background: radial-gradient(ellipse 70% 80% at 30% 40%, rgba(96, 165, 250, 0.65), transparent),
+              radial-gradient(ellipse 60% 70% at 70% 60%, rgba(120, 180, 255, 0.4), transparent),
+              rgba(96, 165, 250, 0.4);
+}
+html[data-theme="dark"] .blog-entry.technical .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 25% 45%, rgba(212, 160, 23, 0.28), transparent 70%),
+              radial-gradient(ellipse 60% 80% at 75% 55%, rgba(230, 180, 50, 0.18), transparent 65%),
+              rgba(212, 160, 23, 0.1);
+}
+html[data-theme="dark"] .blog-entry.reflection .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 30% 45%, rgba(212, 160, 160, 0.25), transparent 70%),
+              radial-gradient(ellipse 60% 80% at 70% 55%, rgba(230, 180, 180, 0.16), transparent 65%),
+              rgba(212, 160, 160, 0.08);
+}
+html[data-theme="dark"] .blog-entry.article .blog-title {
+  background: radial-gradient(ellipse 75% 85% at 25% 40%, rgba(154, 173, 140, 0.25), transparent 70%),
+              radial-gradient(ellipse 60% 75% at 70% 60%, rgba(175, 195, 160, 0.16), transparent 65%),
+              rgba(154, 173, 140, 0.08);
+}
+html[data-theme="dark"] .blog-entry.literature .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 30% 45%, rgba(167, 139, 250, 0.22), transparent 70%),
+              radial-gradient(ellipse 55% 75% at 70% 55%, rgba(185, 160, 255, 0.14), transparent 65%),
+              rgba(167, 139, 250, 0.08);
+}
+html[data-theme="dark"] .blog-entry.life .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 25% 40%, rgba(96, 165, 250, 0.22), transparent 70%),
+              radial-gradient(ellipse 60% 80% at 75% 60%, rgba(120, 180, 255, 0.14), transparent 65%),
+              rgba(96, 165, 250, 0.08);
+}
+
+body.posts-page-body .nav {
+  background: var(--nav-bg);
+}
+
+.blog-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.blog-page-header {
+  width: min(1000px, calc(100vw - 36px));
+  margin: 0 auto;
+  padding: 7.5rem 0 0;
+}
+.blog-page-header .eyebrow {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+.blog-page-header h1 {
+  font-family: 'Spectral', Georgia, serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.blog-layout {
+  display: flex;
+  width: min(1000px, calc(100vw - 36px));
+  margin: 0 auto;
+  padding: 2rem 22rem 0 0;
+  gap: 2rem;
+}
+
+.category-legend {
+  position: sticky;
+  top: 7.6rem;
+  width: 120px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem 1.5rem 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.65rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--radius-sm, 8px);
+  transition: var(--transition);
+}
+
+.legend-item:hover,
+.legend-item.active {
+  background: var(--accent-soft, rgba(184, 134, 11, 0.08));
+  color: var(--text-primary);
+}
+
+.legend-color {
+  width: 28px;
+  height: 12px;
+  border: none;
+  border-radius: 60% 20% 50% 30% / 50% 60% 20% 40%;
+  transform: rotate(-6deg);
+  position: relative;
+}
+
+.legend-color.technical {
+  background: radial-gradient(ellipse 70% 80% at 30% 40%, rgba(184, 134, 11, 0.6), transparent),
+              radial-gradient(ellipse 60% 70% at 70% 60%, rgba(202, 150, 30, 0.4), transparent),
+              rgba(184, 134, 11, 0.35);
+}
+.legend-color.reflection {
+  background: radial-gradient(ellipse 70% 80% at 35% 45%, rgba(196, 125, 125, 0.6), transparent),
+              radial-gradient(ellipse 55% 65% at 65% 55%, rgba(210, 140, 140, 0.4), transparent),
+              rgba(196, 125, 125, 0.35);
+}
+.legend-color.article {
+  background: radial-gradient(ellipse 65% 75% at 30% 40%, rgba(122, 140, 110, 0.6), transparent),
+              radial-gradient(ellipse 60% 70% at 70% 60%, rgba(140, 160, 125, 0.4), transparent),
+              rgba(122, 140, 110, 0.35);
+}
+.legend-color.literature {
+  background: radial-gradient(ellipse 70% 80% at 35% 45%, rgba(139, 92, 246, 0.55), transparent),
+              radial-gradient(ellipse 55% 65% at 65% 55%, rgba(160, 115, 255, 0.35), transparent),
+              rgba(139, 92, 246, 0.3);
+}
+.legend-color.life {
+  background: radial-gradient(ellipse 70% 80% at 30% 40%, rgba(59, 130, 246, 0.55), transparent),
+              radial-gradient(ellipse 60% 70% at 70% 60%, rgba(80, 150, 255, 0.35), transparent),
+              rgba(59, 130, 246, 0.3);
+}
+
+.blog-list {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.blog-entry {
+  display: flex;
+  align-items: center;
+  padding: 0.55rem 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-sm, 8px);
+  transition: transform 280ms ease, background 280ms ease, opacity 280ms ease;
+}
+
+.blog-entry:hover {
+  background: var(--bg-card, #fffcf8);
+  transform: translateX(4px);
+}
+
+.blog-entry .blog-title {
+  padding: 0.25rem 0.65rem;
+  margin-left: 1.5rem;
+  border-radius: 45% 25% 40% 30% / 55% 40% 50% 35%;
+}
+
+.blog-entry.technical .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 25% 45%, rgba(184, 134, 11, 0.22), transparent 70%),
+              radial-gradient(ellipse 60% 80% at 75% 55%, rgba(202, 150, 30, 0.15), transparent 65%),
+              rgba(184, 134, 11, 0.08);
+}
+.blog-entry.reflection .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 30% 45%, rgba(196, 125, 125, 0.22), transparent 70%),
+              radial-gradient(ellipse 60% 80% at 70% 55%, rgba(210, 140, 140, 0.15), transparent 65%),
+              rgba(196, 125, 125, 0.08);
+}
+.blog-entry.article .blog-title {
+  background: radial-gradient(ellipse 75% 85% at 25% 40%, rgba(122, 140, 110, 0.22), transparent 70%),
+              radial-gradient(ellipse 60% 75% at 70% 60%, rgba(140, 160, 125, 0.15), transparent 65%),
+              rgba(122, 140, 110, 0.08);
+}
+.blog-entry.literature .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 30% 45%, rgba(139, 92, 246, 0.18), transparent 70%),
+              radial-gradient(ellipse 55% 75% at 70% 55%, rgba(160, 115, 255, 0.12), transparent 65%),
+              rgba(139, 92, 246, 0.06);
+}
+.blog-entry.life .blog-title {
+  background: radial-gradient(ellipse 80% 90% at 25% 40%, rgba(59, 130, 246, 0.18), transparent 70%),
+              radial-gradient(ellipse 60% 80% at 75% 60%, rgba(80, 150, 255, 0.12), transparent 65%),
+              rgba(59, 130, 246, 0.06);
+}
+
+.blog-entry.hidden { display: none; }
+
+.blog-date {
+  width: 85px;
+  flex-shrink: 0;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+.blog-title {
+  font-size: 0.98rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.hover-preview {
+  position: fixed;
+  top: 45vh;
+  left: 50%;
+  transform: translate(120px, -50%);
+  width: 360px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: var(--transition);
+  z-index: 1000;
+}
+
+.hover-preview.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.preview-content {
+  background: var(--bg-card, #fffcf8);
+  border: 1px solid var(--border, rgba(168, 158, 148, 0.25));
+  border-radius: var(--radius-md, 14px);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md, 0 4px 16px rgba(61, 54, 48, 0.08));
+}
+
+.preview-subtitle {
+  margin: 0 0 1rem 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.preview-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: var(--radius-sm, 8px);
+}
+
+@media (min-width: 1400px) {
+  .hover-preview {
+    transform: translate(200px, -50%);
+    width: 400px;
+  }
+  .preview-image { height: 220px; }
+}
+
+@media (max-width: 1200px) {
+  .blog-layout { padding-right: 20rem; }
+  .hover-preview {
+    transform: translate(80px, -50%);
+    width: 320px;
+  }
+  .preview-image { height: 170px; }
+}
+
+@media (max-width: 900px) {
+  .blog-layout { padding-right: 2rem; }
+  .hover-preview {
+    top: 50%;
+    right: 2rem;
+    left: auto;
+    transform: translateY(-50%);
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-page-header {
+    padding: 6.5rem 1rem 0;
+  }
+  .blog-layout {
+    flex-direction: column;
+    padding: 1.5rem 1rem 2rem;
+    gap: 1.2rem;
+  }
+  .category-legend {
+    position: static;
+    width: 100%;
+    padding: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .blog-list { max-width: 100%; }
+  .blog-entry { padding: 0.5rem 0; }
+  .blog-date { width: 68px; font-size: 0.72rem; }
+  .blog-entry .blog-title { margin-left: 0.35rem; }
+  .hover-preview { display: none; }
+}

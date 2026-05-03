@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery / Runzhuo Gan</title>
+  <script>
+    (function(){document.documentElement.classList.add('fonts-loading');try{var theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.removeAttribute('data-theme');}}catch(e){}}());
+  </script>
+  <link rel="icon" href="/img/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=20260504-043346">
+  <script src="/js/site.js?v=20260504-043346" defer></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand serif-brand"><a class="brand-link" href="/">Runzhuo Gan</a></div>
+      <div class="nav-links">
+        <a href="/public/about.html">About</a>
+        <a href="/public/posts.html">Posts</a>
+        <a href="/public/gallery.html" aria-current="page">Gallery</a>
+        <a href="/public/projects.html">Projects</a>
+        <a href="/public/friends.html">Friends</a>
+        <a href="/public/contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-link" href="https://github.com/Aununo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 22v-4a4 4 0 0 0-.88-2.65c2.9-.33 5.88-1.42 5.88-6.35a4.94 4.94 0 0 0-1.32-3.42 4.6 4.6 0 0 0-.08-3.36s-1.07-.34-3.52 1.3a12.14 12.14 0 0 0-6.16 0c-2.45-1.64-3.52-1.3-3.52-1.3a4.6 4.6 0 0 0-.08 3.36A4.94 4.94 0 0 0 4 9c0 4.91 2.97 6.02 5.88 6.35A4 4 0 0 0 9 18v4"/>
+            <path d="M9 18c-4 1.5-5-2-7-2"/>
+          </svg>
+        </a>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path>
+          </svg>
+        </button>
+        <button class="search-link" onclick="toggleSearch()" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16 16l5 5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="gallery-lightbox" id="gallery-lightbox">
+    <div class="gallery-lightbox__content" id="gallery-lightbox-content"></div>
+  </div>
+
+  <main class="page-content">
+    <div class="container">
+      <div class="hero">
+        <span class="eyebrow">Gallery</span>
+        <h1>Things worth lingering on.</h1>
+        <p>A collection of art, music, literature, and fragments that hold my attention.</p>
+      </div>
+
+      <div class="gallery-wall">
+
+        <!-- Row 1 -->
+        <figure class="gw-painting" style="--r: -2deg; --x: 0%">
+          <div class="gw-painting__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f764ec63d35.jpg" alt="Starry Night by Van Gogh"></div>
+          <figcaption>
+            <span class="gw-painting__title">Starry Night <span>Van Gogh, 1889</span></span>
+            <span class="gw-painting__desc">The Starry Night, is an oil-on-canvas painting by the Dutch Post-Impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an imaginary village.</span>
+          </figcaption>
+        </figure>
+
+        <blockquote class="gw-quote" style="--x: 5%">
+          <p>He stood still, his face showing a mixture of joy and sorrow; his lips moved, but he made no sound. His manner at last became respectful, and he clearly called out: "Master!"</p>
+          <footer>Lu Xun, <em>My Old Home</em></footer>
+        </blockquote>
+
+        <figure class="gw-sculpture" style="--r: -1deg; --x: -2%">
+          <div class="gw-sculpture__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f76d2ac0649.jpg" alt="David by Michelangelo"></div>
+          <figcaption>David <span>Michelangelo, 1504</span></figcaption>
+        </figure>
+
+        <!-- Row 2 -->
+        <figure class="gw-painting" style="--r: 1.5deg; --x: -3%">
+          <div class="gw-painting__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f7668e6a89e.jpeg" alt="Sunflowers by Van Gogh"></div>
+          <figcaption>
+            <span class="gw-painting__title">Sunflowers <span>Van Gogh, 1888</span></span>
+            <span class="gw-painting__desc">Sunflowers is the title of two series of still life paintings by the Dutch painter Vincent van Gogh. The first series, executed in Paris in 1887, depicts the flowers lying on the ground, while the second set, made a year later in Arles, shows a bouquet of sunflowers in a vase.</span>
+          </figcaption>
+        </figure>
+
+        <div class="gw-music" style="--r: 1.5deg; --x: 2%" data-spotify="0bWGqfaEeTIvrnKGPJFD18">
+          <div class="gw-music__cover">
+            <img class="gw-music__art" alt="那天下雨了 album art">
+            <div class="gw-music__play"><svg class="gw-music__icon-play" viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg><svg class="gw-music__icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></div>
+          </div>
+          <div class="gw-music__info">
+            <span class="gw-music__title">那天下雨了</span>
+            <span class="gw-music__artist">Jay Chou</span>
+          </div>
+        </div>
+
+        <blockquote class="gw-quote gw-quote--short" style="--x: -3%">
+          <p>Monsieur, ceci conclut mes éloges à l'égard de l'expédition en Chine.</p>
+          <footer>Victor Hugo, <em>letter to Captain Butler</em>, 1861</footer>
+        </blockquote>
+
+        <!-- Row 3 -->
+        <figure class="gw-painting" style="--r: 2.5deg; --x: 4%">
+          <div class="gw-painting__img"><img src="https://image.aununo.xyz/i/2026/05/04/69f785cbe81af.jpg" alt="The Stream"></div>
+          <figcaption>
+            <span class="gw-painting__title">The Stream</span>
+          </figcaption>
+        </figure>
+
+        <figure class="gw-sculpture gw-sculpture--tall" style="--r: 1deg; --x: 3%">
+          <div class="gw-sculpture__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f76d2af2dac.jpg" alt="Venus de Milo"></div>
+          <figcaption>Venus de Milo <span>Alexandros of Antioch, c. 130–100 BC</span></figcaption>
+        </figure>
+
+        <div class="gw-music" style="--r: -1deg; --x: -2%" data-spotify="6IxybHcuHhLyZFKbe3EXJK">
+          <div class="gw-music__cover">
+            <img class="gw-music__art" alt="Colder album art">
+            <div class="gw-music__play"><svg class="gw-music__icon-play" viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg><svg class="gw-music__icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></div>
+          </div>
+          <div class="gw-music__info">
+            <span class="gw-music__title">Colder</span>
+            <span class="gw-music__artist">KUN</span>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <figure class="gw-painting gw-painting--wide" style="--r: -1.5deg; --x: 0%">
+          <div class="gw-painting__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f769be778f9.jpg" alt="The Creation of Adam by Michelangelo"></div>
+          <figcaption>
+            <span class="gw-painting__title">Creazione di Adamo <span>Michelangelo, 1508–1512</span></span>
+            <span class="gw-painting__desc">The Creation of Adam is a fresco painting by Italian artist Michelangelo, which forms part of the Sistine Chapel's ceiling, painted 1508–1512. It illustrates the Biblical creation narrative from the Book of Genesis in which God gives life to Adam, the first man.</span>
+          </figcaption>
+        </figure>
+
+        <div class="gw-music" style="--r: 2deg; --x: -1%" data-spotify="6dOtVTDdiauQNBQEDOtlAB">
+          <div class="gw-music__cover">
+            <img class="gw-music__art" alt="Birds of a Feather album art">
+            <div class="gw-music__play"><svg class="gw-music__icon-play" viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg><svg class="gw-music__icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></div>
+          </div>
+          <div class="gw-music__info">
+            <span class="gw-music__title">Birds of a Feather</span>
+            <span class="gw-music__artist">Billie Eilish</span>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <blockquote class="gw-quote" style="--x: 4%">
+          <p>So-called human civilization is simply the belief that spitting out an apple core is a very noble act.</p>
+          <footer>Dandan, <em>WeChat group chat</em></footer>
+        </blockquote>
+
+        <figure class="gw-sculpture" style="--r: -2deg; --x: 1%">
+          <div class="gw-sculpture__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f76d2b74771.jpg" alt="The Thinker by Rodin"></div>
+          <figcaption>The Thinker <span>Rodin, 1904</span></figcaption>
+        </figure>
+
+        <div class="gw-music" style="--r: -1.5deg; --x: 3%" data-spotify="4pvb0WLRcMtbPGmtejJJ6y">
+          <div class="gw-music__cover">
+            <img class="gw-music__art" alt="exile album art">
+            <div class="gw-music__play"><svg class="gw-music__icon-play" viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg><svg class="gw-music__icon-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></div>
+          </div>
+          <div class="gw-music__info">
+            <span class="gw-music__title">exile</span>
+            <span class="gw-music__artist">Taylor Swift ft. Bon Iver</span>
+          </div>
+        </div>
+
+        <!-- Row 6 -->
+        <figure class="gw-sculpture" style="--r: 1.5deg; --x: -1%">
+          <div class="gw-sculpture__img"><img src="https://image.aununo.xyz/i/2026/05/03/69f76d2bad15e.jpg" alt="Winged Victory of Samothrace"></div>
+          <figcaption>Winged Victory <span>c. 190 BC</span></figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>Copyright &copy; Runzhuo Gan</span>
+    </div>
+  </main>
+</body>
+</html>

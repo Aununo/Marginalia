@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts / Runzhuo Gan</title>
+  <script>
+    (function(){document.documentElement.classList.add('fonts-loading');try{var theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.removeAttribute('data-theme');}}catch(e){}}());
+  </script>
+  <link rel="icon" href="/img/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=20260504-043347">
+  <link rel="stylesheet" href="/static/posts.css?v=20260504-043347">
+  <script src="/js/site.js?v=20260504-043347" defer></script>
+</head>
+<body class="posts-page-body">
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand serif-brand"><a class="brand-link" href="/">Runzhuo Gan</a></div>
+      <div class="nav-links">
+        <a href="/public/about.html">About</a>
+        <a href="/public/posts.html" aria-current="page">Posts</a>
+        <a href="/public/gallery.html">Gallery</a>
+        <a href="/public/projects.html">Projects</a>
+        <a href="/public/friends.html">Friends</a>
+        <a href="/public/contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-link" href="https://github.com/Aununo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 22v-4a4 4 0 0 0-.88-2.65c2.9-.33 5.88-1.42 5.88-6.35a4.94 4.94 0 0 0-1.32-3.42 4.6 4.6 0 0 0-.08-3.36s-1.07-.34-3.52 1.3a12.14 12.14 0 0 0-6.16 0c-2.45-1.64-3.52-1.3-3.52-1.3a4.6 4.6 0 0 0-.08 3.36A4.94 4.94 0 0 0 4 9c0 4.91 2.97 6.02 5.88 6.35A4 4 0 0 0 9 18v4"/>
+            <path d="M9 18c-4 1.5-5-2-7-2"/>
+          </svg>
+        </a>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>
+          </svg>
+        </button>
+        <button class="search-link" onclick="toggleSearch()" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16 16l5 5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="blog-page">
+    <div class="blog-page-header">
+      <span class="eyebrow">Posts</span>
+      <h1>Notes, ideas, and things I'm learning.</h1>
+    </div>
+    <div class="blog-layout">
+      <div class="category-legend">
+        <div class="legend-item" data-category="technical">
+          <div class="legend-color technical"></div>
+          <span>Technical</span>
+        </div>
+        <div class="legend-item" data-category="life">
+          <div class="legend-color life"></div>
+          <span>Life</span>
+        </div>
+      </div>
+
+      <div class="blog-list" id="blog-list">
+        <a
+          href="/public/posts/hello-world.html"
+          class="blog-entry technical"
+          data-category="technical"
+          data-subtitle="A playground post for checking how headings, lists, links, code blocks, tables, footnotes, and inline HTML render on the post page."
+          data-image="/img/posts/hello-world.svg">
+          <span class="blog-date">03-25-2026</span>
+          <span class="blog-title">Hello World</span>
+        </a>
+        <a
+          href="/public/posts/52-things-i-love-about-shenshen.html"
+          class="blog-entry life"
+          data-category="life"
+          data-subtitle="A timeline of two people finding each other — from a QQ request to a winter solstice dinner."
+          data-image="https://image.aununo.xyz/i/2026/05/03/69f7216137c2b.jpg">
+          <span class="blog-date">12-28-2025</span>
+          <span class="blog-title">52 Things I Love About Shenshen</span>
+        </a>
+      </div>
+
+      <div class="hover-preview">
+        <div class="preview-content">
+          <p class="preview-subtitle"></p>
+          <img class="preview-image" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

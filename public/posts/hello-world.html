@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World / Runzhuo Gan</title>
+  <script>
+    (function(){document.documentElement.classList.add('fonts-loading');try{var theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.removeAttribute('data-theme');}}catch(e){}}());
+  </script>
+  <link rel="icon" href="/img/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=20260504-043347">
+  <script src="/js/site.js?v=20260504-043347" defer></script>
+</head>
+<body class="post-page-body">
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand serif-brand"><a class="brand-link" href="/">Runzhuo Gan</a></div>
+      <div class="nav-links">
+        <a href="/public/about.html">About</a>
+        <a href="/public/posts.html" aria-current="page">Posts</a>
+        <a href="/public/gallery.html">Gallery</a>
+        <a href="/public/projects.html">Projects</a>
+        <a href="/public/friends.html">Friends</a>
+        <a href="/public/contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-link" href="https://github.com/Aununo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 22v-4a4 4 0 0 0-.88-2.65c2.9-.33 5.88-1.42 5.88-6.35a4.94 4.94 0 0 0-1.32-3.42 4.6 4.6 0 0 0-.08-3.36s-1.07-.34-3.52 1.3a12.14 12.14 0 0 0-6.16 0c-2.45-1.64-3.52-1.3-3.52-1.3a4.6 4.6 0 0 0-.08 3.36A4.94 4.94 0 0 0 4 9c0 4.91 2.97 6.02 5.88 6.35A4 4 0 0 0 9 18v4"/>
+            <path d="M9 18c-4 1.5-5-2-7-2"/>
+          </svg>
+        </a>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/>
+          </svg>
+        </button>
+        <button class="search-link" onclick="toggleSearch()" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16 16l5 5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main class="container post-container">
+    <article class="hero post-article">
+      <div class="post-shell has-toc">
+        <div class="post-main">
+          <p class="post-back"><a href="/public/posts.html">← back to posts</a></p>
+          <h1>Hello World</h1>
+          <p class="post-meta">2026-03-25</p>
+          <div class="post-tags"><span class="tag">hello world</span><span class="tag">markdown</span><span class="tag">playground</span></div>
+          <div class="post-body">
+            <p>This post is a compact playground for validating how different Markdown syntaxes render in the current post template.</p>
+<h2 id="paragraphs-and-inline-styles">Paragraphs And Inline Styles</h2>
+<p>This paragraph mixes <em>italic</em>, <strong>bold</strong>, <strong><em>bold italic</em></strong>, <code>inline code</code>, a <a href="/public/posts.html">normal link</a>, and an auto link <a href="https://www.example.com">https://www.example.com</a>.</p>
+<p>Hard line breaks can be tested here.<br>
+This line should stay directly below the previous one.</p>
+<p>You can also test escaped characters like *literal asterisks* and `literal backticks`.</p>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered">Unordered</h3>
+<ul>
+<li>First item</li>
+<li>Second item<ul>
+<li>Nested item A</li>
+<li>Nested item B</li>
+</ul>
+</li>
+<li>Third item</li>
+</ul>
+<h3 id="ordered">Ordered</h3>
+<ol>
+<li>Step one</li>
+<li>Step two</li>
+<li>Step three</li>
+</ol>
+<h3 id="potential-gfm-only-syntax">Potential GFM-Only Syntax</h3>
+<ul class="task-list">
+<li class="task-list-item"><input aria-hidden="true" checked class="task-list-item-checkbox" disabled type="checkbox">Task list item</li>
+<li class="task-list-item"><input aria-hidden="true" class="task-list-item-checkbox" disabled type="checkbox">Another task list item</li>
+<li><del>Strikethrough sample</del></li>
+</ul>
+<h2 id="blockquote">Blockquote</h2>
+<blockquote>
+<p>Good post typography should make quoted text feel distinct without breaking the reading rhythm.</p>
+<p>Second line in the same quote block.</p>
+</blockquote>
+<h2 id="code-blocks">Code Blocks</h2>
+<div class="codehilite"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hello world&quot;</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">renderPost</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">title</span><span class="si">}</span><span class="sb"> is ready for markdown testing.`</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">renderPost</span><span class="p">(</span><span class="nx">greeting</span><span class="p">));</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>python3<span class="w"> </span>scripts/build_posts.py
+</code></pre></div>
+
+<h2 id="table">Table</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Syntax</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Expected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Inline code</td>
+<td style="text-align: left;"><code>npm run build</code></td>
+<td style="text-align: left;">Monospace chip</td>
+</tr>
+<tr>
+<td style="text-align: left;">Link</td>
+<td style="text-align: left;"><a href="/public/posts.html">Posts</a></td>
+<td style="text-align: left;">Underlined link</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bold</td>
+<td style="text-align: left;"><strong>strong</strong></td>
+<td style="text-align: left;">Heavier weight</td>
+</tr>
+</tbody>
+</table>
+<h2 id="definition-list">Definition List</h2>
+<dl>
+<dt>Markdown</dt>
+<dd>A lightweight markup language for writing formatted text.</dd>
+<dt>Static site</dt>
+<dd>A site generated ahead of time into <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JS.</dd>
+</dl>
+<h2 id="footnotes">Footnotes</h2>
+<p>Footnotes are useful for side comments.<sup id="fnref:note"><a class="footnote-ref" href="#fn:note">1</a></sup></p>
+<p>Another footnote can carry a longer explanation.<sup id="fnref:long"><a class="footnote-ref" href="#fn:long">2</a></sup></p>
+<h2 id="abbreviation">Abbreviation</h2>
+<p>The <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> acronyms below should expand via the abbreviation extension.</p>
+<h2 id="image">Image</h2>
+<p><img alt="Hello World preview image" src="/img/posts/hello-world.svg"></p>
+<h2 id="gallery">Gallery</h2>
+<div class="post-gallery" tabindex="0" aria-label="Scrollable image gallery">
+  <figure class="post-gallery-item" tabindex="0">
+    <img src="/img/posts/hello-world.svg" alt="Warm editor layout">
+    <figcaption>
+      <span class="post-gallery-caption-title">Warm editor layout</span>
+    </figcaption>
+  </figure>
+  <figure class="post-gallery-item" tabindex="0">
+    <img src="/img/posts/gallery-frame-1.svg" alt="Blueprint notes">
+    <figcaption>
+      <span class="post-gallery-caption-title">Blueprint notes</span>
+    </figcaption>
+  </figure>
+  <figure class="post-gallery-item" tabindex="0">
+    <img src="/img/posts/gallery-frame-2.svg" alt="Reading rhythm">
+    <figcaption>
+      <span class="post-gallery-caption-title">Reading rhythm</span>
+    </figcaption>
+  </figure>
+  <figure class="post-gallery-item" tabindex="0">
+    <img src="/img/posts/gallery-frame-3.svg" alt="Soft archive view">
+    <figcaption>
+      <span class="post-gallery-caption-title">Soft archive view</span>
+    </figcaption>
+  </figure>
+  <figure class="post-gallery-item" tabindex="0">
+    <img src="/img/posts/gallery-frame-4.svg" alt="Compact preview panel">
+    <figcaption>
+      <span class="post-gallery-caption-title">Compact preview panel</span>
+    </figcaption>
+  </figure>
+</div>
+
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<hr>
+<h2 id="inline-html">Inline <abbr title="HyperText Markup Language">HTML</abbr></h2>
+<p>Some syntax is easier to test with raw <abbr title="HyperText Markup Language">HTML</abbr>: <kbd>Cmd</kbd> + <kbd>K</kbd>, <mark>highlight</mark>, and <del>deleted text</del>.</p>
+<details>
+<summary>Collapsible HTML block</summary>
+
+This block uses raw HTML inside Markdown. It is handy for checking spacing around embedded elements.
+
+</details>
+
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:note">
+<p>This is a short footnote.&#160;<a class="footnote-backref" href="#fnref:note" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:long">
+<p>If this renders as a footnote section at the bottom, the extension is working.&#160;<a class="footnote-backref" href="#fnref:long" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+          </div>
+        </div>
+      <aside class="post-sidebar" aria-label="Table of contents">
+        <p class="post-sidebar-title">Content</p>
+        <div class="toc">
+<ul>
+<li><a href="#paragraphs-and-inline-styles">Paragraphs And Inline Styles</a></li>
+<li><a href="#lists">Lists</a><ul>
+<li><a href="#unordered">Unordered</a></li>
+<li><a href="#ordered">Ordered</a></li>
+<li><a href="#potential-gfm-only-syntax">Potential GFM-Only Syntax</a></li>
+</ul>
+</li>
+<li><a href="#blockquote">Blockquote</a></li>
+<li><a href="#code-blocks">Code Blocks</a></li>
+<li><a href="#table">Table</a></li>
+<li><a href="#definition-list">Definition List</a></li>
+<li><a href="#footnotes">Footnotes</a></li>
+<li><a href="#abbreviation">Abbreviation</a></li>
+<li><a href="#image">Image</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+<li><a href="#inline-html">Inline HTML</a></li>
+</ul>
+</div>
+      </aside>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

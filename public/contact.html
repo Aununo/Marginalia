@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact / Runzhuo Gan</title>
+  <script>
+    (function(){document.documentElement.classList.add('fonts-loading');try{var theme=localStorage.getItem('theme');if(theme==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.removeAttribute('data-theme');}}catch(e){}}());
+  </script>
+  <link rel="icon" href="/img/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css?v=20260504-043346">
+  <script src="/js/site.js?v=20260504-043346" defer></script>
+  <script src="/js/particles.js" defer></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand serif-brand"><a class="brand-link" href="/">Runzhuo Gan</a></div>
+      <div class="nav-links">
+        <a href="/public/about.html">About</a>
+        <a href="/public/posts.html">Posts</a>
+        <a href="/public/gallery.html">Gallery</a>
+        <a href="/public/projects.html">Projects</a>
+        <a href="/public/friends.html">Friends</a>
+        <a href="/public/contact.html" aria-current="page">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="icon-link" href="https://github.com/Aununo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 22v-4a4 4 0 0 0-.88-2.65c2.9-.33 5.88-1.42 5.88-6.35a4.94 4.94 0 0 0-1.32-3.42 4.6 4.6 0 0 0-.08-3.36s-1.07-.34-3.52 1.3a12.14 12.14 0 0 0-6.16 0c-2.45-1.64-3.52-1.3-3.52-1.3a4.6 4.6 0 0 0-.08 3.36A4.94 4.94 0 0 0 4 9c0 4.91 2.97 6.02 5.88 6.35A4 4 0 0 0 9 18v4"/>
+            <path d="M9 18c-4 1.5-5-2-7-2"/>
+          </svg>
+        </a>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path>
+          </svg>
+        </button>
+        <button class="search-link" onclick="toggleSearch()" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5"></circle>
+            <path d="M16 16l5 5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container page-content">
+    <div class="hero">
+      <span class="eyebrow">Contact</span>
+      <h1>A letter, waiting to be read.</h1>
+    </div>
+
+    <div class="letter-scene">
+      <!-- Quill pen decoration -->
+      <svg class="letter-pen" viewBox="0 0 40 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="quill-feather" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f5f0e8"/>
+            <stop offset="30%" stop-color="#e8e0d0"/>
+            <stop offset="100%" stop-color="#d8cfc0"/>
+          </linearGradient>
+          <linearGradient id="quill-shaft" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#c8b898"/>
+            <stop offset="50%" stop-color="#b8a880"/>
+            <stop offset="100%" stop-color="#a89870"/>
+          </linearGradient>
+          <linearGradient id="quill-nib" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#d4b060"/>
+            <stop offset="100%" stop-color="#a08040"/>
+          </linearGradient>
+        </defs>
+        <!-- Feather barbs - left side -->
+        <path d="M20,8 Q5,25 3,50 Q2,70 6,90 Q10,108 16,120 L20,115 Q14,100 10,80 Q7,60 8,40 Q10,22 20,8Z" fill="url(#quill-feather)" opacity="0.9"/>
+        <path d="M20,12 Q7,30 5,55 Q4,72 8,88 Q12,102 17,112 L20,108 Q15,95 11,78 Q8,60 9,42 Q11,25 20,12Z" fill="url(#quill-feather)" opacity="0.7"/>
+        <!-- Feather barbs - right side -->
+        <path d="M20,8 Q35,25 37,50 Q38,70 34,90 Q30,108 24,120 L20,115 Q26,100 30,80 Q33,60 32,40 Q30,22 20,8Z" fill="url(#quill-feather)" opacity="0.85"/>
+        <path d="M20,12 Q33,30 35,55 Q36,72 32,88 Q28,102 23,112 L20,108 Q25,95 29,78 Q32,60 31,42 Q29,25 20,12Z" fill="url(#quill-feather)" opacity="0.65"/>
+        <!-- Feather center highlight -->
+        <path d="M20,8 Q19,40 19,70 Q19,95 20,115" stroke="#fff" stroke-width="0.5" fill="none" opacity="0.3"/>
+        <!-- Shaft (rachis) -->
+        <rect x="19" y="8" width="2.5" height="160" rx="1" fill="url(#quill-shaft)"/>
+        <!-- Shaft highlight -->
+        <line x1="19.8" y1="10" x2="19.8" y2="165" stroke="#d4c8a8" stroke-width="0.5" opacity="0.5"/>
+        <!-- Nib holder (bare shaft) -->
+        <path d="M19,168 L21.5,168 L21,185 L20,192 L19,185Z" fill="#8a7a5a"/>
+        <!-- Nib -->
+        <path d="M19,185 L20,198 L21,185" fill="url(#quill-nib)"/>
+        <!-- Nib slit -->
+        <line x1="20" y1="188" x2="20" y2="196" stroke="#7a6a3a" stroke-width="0.4"/>
+        <!-- Ink drop at tip -->
+        <circle cx="20" cy="199" r="1.5" fill="#1a1a3a" opacity="0.7"/>
+        <circle cx="21.5" cy="196" r="0.7" fill="#1a1a3a" opacity="0.4"/>
+      </svg>
+
+      <!-- Letter paper -->
+      <div class="letter-paper reveal">
+        <div class="letter-date">May 2026</div>
+        <p class="letter-greeting">Dear visitor,</p>
+        <p>Thank you for stopping by. If you'd like to get in touch, the best way is through one of the links below. I read everything, and I try to reply when I have something worth saying back.</p>
+        <p>You can also find me through the links on my <a href="/public/about.html">about page</a>.</p>
+
+        <div class="letter-links">
+          <a class="letter-link" href="https://github.com/Aununo" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M15 22v-4a4 4 0 0 0-.88-2.65c2.9-.33 5.88-1.42 5.88-6.35a4.94 4.94 0 0 0-1.32-3.42 4.6 4.6 0 0 0-.08-3.36s-1.07-.34-3.52 1.3a12.14 12.14 0 0 0-6.16 0c-2.45-1.64-3.52-1.3-3.52-1.3a4.6 4.6 0 0 0-.08 3.36A4.94 4.94 0 0 0 4 9c0 4.91 2.97 6.02 5.88 6.35A4 4 0 0 0 9 18v4"/><path d="M9 18c-4 1.5-5-2-7-2"/></svg>
+            <span>GitHub</span>
+            <span class="letter-link__handle">@Aununo</span>
+          </a>
+          <a class="letter-link" href="mailto:ganrunzhuo@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>Email</span>
+            <span class="letter-link__handle">ganrunzhuo@gmail.com</span>
+          </a>
+        </div>
+
+        <p class="letter-sign">
+          Warm regards,<br>
+          <span class="letter-signature">Runzhuo</span>
+        </p>
+      </div>
+
+      <!-- Ink stain decoration -->
+      <svg class="letter-ink" viewBox="0 0 60 60" aria-hidden="true">
+        <ellipse cx="30" cy="32" rx="18" ry="14" fill="currentColor" opacity="0.08"/>
+        <ellipse cx="35" cy="28" rx="8" ry="6" fill="currentColor" opacity="0.05"/>
+        <circle cx="42" cy="22" r="3" fill="currentColor" opacity="0.06"/>
+        <circle cx="48" cy="26" r="1.5" fill="currentColor" opacity="0.04"/>
+      </svg>
+    </div>
+
+    <div class="footer">
+      <span>Copyright &copy; Runzhuo Gan</span>
+    </div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof particlesJS !== 'undefined') {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 40, density: { enable: true, value_area: 1000 } },
+            color: { value: isDark ? ['#7a7a8a', '#8a8a9a', '#6a6a7a', '#5a5a6a'] : ['#8b7254', '#a0845c', '#6b5d4a', '#9c7a50'] },
+            shape: { type: 'circle' },
+            opacity: { value: isDark ? 0.35 : 0.55, random: true, anim: { enable: true, speed: 0.8, opacity_min: 0.15, sync: false } },
+            size: { value: 3, random: true, anim: { enable: true, speed: 2, size_min: 0.8, sync: false } },
+            line_linked: { enable: true, distance: 150, color: isDark ? '#6a6a7a' : '#8b7254', opacity: isDark ? 0.2 : 0.35, width: 1 },
+            move: { enable: true, speed: 0.8, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: { onhover: { enable: true, mode: 'grab' }, onclick: { enable: true, mode: 'push' }, resize: true },
+            modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } }, push: { particles_nb: 3 } }
+          },
+          retina_detect: true
+        });
+      }
+    });
+  </script>
+</body>
+</html>
