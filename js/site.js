@@ -1051,15 +1051,22 @@
       if(!art) return;
 
       var trackId = card.getAttribute('data-spotify');
+      var coverUrl = card.getAttribute('data-cover');
 
-      // Fetch album art from Spotify oEmbed
       art.onload = function(){ art.classList.add('is-loaded'); };
-      var oembedUrl = 'https://open.spotify.com/oembed?url=https://open.spotify.com/track/' + trackId;
-      fetch(oembedUrl).then(function(r){ return r.json(); }).then(function(data){
-        if(data.thumbnail_url){
-          art.src = data.thumbnail_url;
-        }
-      }).catch(function(){});
+      if(coverUrl){
+        art.src = coverUrl;
+      }
+
+      // Fetch album art from Spotify oEmbed when the card does not provide an override.
+      if(!coverUrl){
+        var oembedUrl = 'https://open.spotify.com/oembed?url=https://open.spotify.com/track/' + trackId;
+        fetch(oembedUrl).then(function(r){ return r.json(); }).then(function(data){
+          if(data.thumbnail_url){
+            art.src = data.thumbnail_url;
+          }
+        }).catch(function(){});
+      }
 
       // Play/pause toggle
       if(playBtn){
