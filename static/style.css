@@ -32,6 +32,8 @@
   --link-underline: rgba(168, 158, 148, 0.35);
   --link-underline-hover: rgba(61, 54, 48, 0.6);
   --nav-bg: rgba(250, 246, 240, 0.82);
+  --nav-height: 68px;
+  --nav-page-gap: clamp(1.25rem, 4vw, 2.5rem);
   --code-bg: #f5f0e8;
   --code-text: #3b3128;
   --code-block-bg: #f8f4ec;
@@ -101,6 +103,7 @@ html[data-theme="dark"] {
 ::selection { background: var(--selection-bg); color: var(--selection-color); }
 html {
   color-scheme: light;
+  scroll-padding-top: calc(var(--nav-height) + 1.25rem);
 }
 html[data-theme="dark"] {
   color-scheme: dark;
@@ -688,7 +691,7 @@ html.fonts-loading .home-hero__name {
 .container {
   width: min(1000px, calc(100vw - 36px));
   max-width: 1000px;
-  margin-top: 12vh;
+  margin-top: calc(var(--nav-height) + var(--nav-page-gap));
   position: relative;
   z-index: 1;
   padding-bottom: 48px;
@@ -950,7 +953,7 @@ body:has(#particles-js) .letter-link {
 }
 /* Contact page — tighter top spacing */
 body:has(#particles-js) .container.page-content {
-  margin-top: 6vh;
+  margin-top: calc(var(--nav-height) + clamp(1rem, 3vw, 2rem));
 }
 
 /* ── Contact: Letter Scene ── */
@@ -2322,7 +2325,7 @@ ul > li::before {
   padding-right: 20px;
 }
 .post-page-body .post-body :is(h1, h2, h3, h4, h5, h6)[id] {
-  scroll-margin-top: 8.5rem;
+  scroll-margin-top: calc(var(--nav-height) + 1.25rem);
 }
 .post-shell {
   display: grid;
@@ -2847,7 +2850,7 @@ ul > li::before {
   display: none;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 12vh;
+  padding-top: calc(var(--nav-height) + 1.5rem);
   background: rgba(61, 54, 48, 0.15);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -3024,19 +3027,23 @@ ul > li::before {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --nav-height: 104px;
+    --nav-page-gap: 1.25rem;
+  }
   body {
     font-size: 16px;
   }
   .container {
     width: min(100% - 32px, 680px);
-    margin-top: 112px;
+    margin-top: calc(var(--nav-height) + var(--nav-page-gap));
     padding: 0 0 2rem;
   }
   .post-page-body .post-container {
     width: min(100%, calc(100vw - 20px));
   }
   .post-page-body .post-body :is(h1, h2, h3, h4, h5, h6)[id] {
-    scroll-margin-top: 12rem;
+    scroll-margin-top: calc(var(--nav-height) + 1.25rem);
   }
   .nav {
     background: var(--nav-bg);
@@ -3085,10 +3092,24 @@ ul > li::before {
 
   .home-hero {
     min-height: 100svh;
-    padding: 6.2rem 1.25rem 3.4rem;
+    padding: calc(var(--nav-height) + 1rem) 1.25rem max(3.4rem, env(safe-area-inset-bottom));
+    justify-content: center;
   }
   .home-hero__name {
-    font-size: clamp(2.4rem, 10vw, 3.5rem);
+    font-size: clamp(2.35rem, 14vw, 3.6rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    letter-spacing: 0;
+  }
+  .home-hero__tagline {
+    max-width: min(100%, 22rem);
+    line-height: 1.5;
+  }
+  .home-hero__subtitle {
+    max-width: min(100%, 22rem);
+  }
+  .home-hero__scroll-hint {
+    bottom: max(1.25rem, env(safe-area-inset-bottom));
   }
   .constellation-canvas {
     height: 300px;
@@ -3191,9 +3212,13 @@ ul > li::before {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --nav-height: 102px;
+    --nav-page-gap: 1rem;
+  }
   .container {
     width: min(100% - 24px, 420px);
-    margin-top: 106px;
+    margin-top: calc(var(--nav-height) + var(--nav-page-gap));
   }
   .nav-inner {
     padding-inline: 12px;
@@ -3215,10 +3240,11 @@ ul > li::before {
     height: 32px;
   }
   .home-hero__tagline {
-    max-width: 20rem;
+    max-width: min(100%, 20rem);
+    font-size: 0.98rem;
   }
   .home-hero__subtitle {
-    max-width: 18rem;
+    max-width: min(100%, 18rem);
   }
   .constellation-label {
     margin-top: 2.5rem;
@@ -3251,13 +3277,23 @@ ul > li::before {
     overflow-wrap: anywhere;
   }
   .search-modal {
-    padding-top: 92px;
+    padding-top: calc(var(--nav-height) + 0.75rem);
   }
   .search-panel {
     width: calc(100vw - 20px);
-    max-height: calc(100svh - 112px);
+    max-height: calc(100svh - var(--nav-height) - 1.5rem);
     padding: 12px;
     border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 768px) and (max-height: 640px) {
+  .home-hero {
+    min-height: 100svh;
+    padding-bottom: 2rem;
+  }
+  .home-hero__scroll-hint {
+    display: none;
   }
 }
 

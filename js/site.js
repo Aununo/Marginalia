@@ -6,6 +6,28 @@
   let searchLoaded = false;
   let searchIndex = [];
 
+  function updateNavHeight(){
+    var nav = document.querySelector('.nav');
+    if(!nav) return;
+    root.style.setProperty('--nav-height', Math.ceil(nav.getBoundingClientRect().height) + 'px');
+  }
+
+  function initNavMetrics(){
+    updateNavHeight();
+    window.addEventListener('load', updateNavHeight);
+    window.addEventListener('resize', updateNavHeight);
+    window.addEventListener('orientationchange', function(){
+      window.setTimeout(updateNavHeight, 120);
+    });
+    if(window.ResizeObserver){
+      var nav = document.querySelector('.nav');
+      if(nav){
+        var observer = new ResizeObserver(updateNavHeight);
+        observer.observe(nav);
+      }
+    }
+  }
+
   function renderThemeButtons(theme){
     const markup = theme === 'dark' ? sunIcon : moonIcon;
     document.querySelectorAll('.theme-btn').forEach(function(button){
@@ -28,6 +50,7 @@
       done = true;
       root.classList.remove('fonts-loading');
       root.classList.add('fonts-ready');
+      updateNavHeight();
     }
 
     window.setTimeout(reveal, 900);
@@ -1141,6 +1164,7 @@
   }
 
   /* ── Init all ── */
+  initNavMetrics();
   initCursorSpotlight();
   initFontReady();
   initTypewriter();

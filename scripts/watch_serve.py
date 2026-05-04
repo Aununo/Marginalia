@@ -41,8 +41,9 @@ def collect_mtimes() -> dict[str, float]:
     return mtimes
 
 
-class ReusableTCPServer(socketserver.TCPServer):
+class ReusableTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     allow_reuse_address = True
+    daemon_threads = True
 
 
 def run_build() -> bool:
