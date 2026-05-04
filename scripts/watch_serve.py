@@ -65,7 +65,7 @@ def watcher() -> None:
                 print(f"[watch] Rebuild complete. Serving at http://localhost:{port}")
             else:
                 print("[watch] Rebuild failed. Fix the error above and save again.")
-            prev = curr
+            prev = collect_mtimes()
 
 
 port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
