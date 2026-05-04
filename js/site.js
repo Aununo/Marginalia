@@ -974,15 +974,33 @@
 
     var items = document.querySelectorAll('.gw-painting, .gw-sculpture');
     items.forEach(function(item){
+      var pointerStart = null;
+
       item.setAttribute('role', 'button');
       item.setAttribute('tabindex', '0');
 
+      function hasSelectedText(){
+        var selection = window.getSelection ? window.getSelection() : null;
+        return !!(selection && selection.toString().trim());
+      }
+
+      function isDragClick(e){
+        if(!pointerStart) return false;
+        var deltaX = Math.abs(e.clientX - pointerStart.x);
+        var deltaY = Math.abs(e.clientY - pointerStart.y);
+        return deltaX > 5 || deltaY > 5;
+      }
+
       function openItem(e){
+        if(e.type === 'click' && (hasSelectedText() || isDragClick(e))) return;
         e.stopPropagation();
         content.innerHTML = item.innerHTML;
         lightbox.classList.add('active');
       }
 
+      item.addEventListener('pointerdown', function(e){
+        pointerStart = { x: e.clientX, y: e.clientY };
+      });
       item.addEventListener('click', openItem);
       item.addEventListener('keydown', function(e){
         if(e.key === 'Enter' || e.key === ' '){
